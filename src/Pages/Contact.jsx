@@ -48,11 +48,12 @@ const Contact = () => {
   };
 
   return (
-    <div className='px-20'>
+    <div className='px-10 lg:px-20 my-32' id='contact'>
       <p className='text-2xl border-l-4 pl-5 border-Primary my-10'>Let's Connect</p>
       <div className='flex'>
-        <div className='w-2/6 p-5 text-sm flex flex-col justify-between h-80'>
-          <div className='space-y-5'>
+        <div className='w-2/6 p-5 text-[16px] flex flex-col justify-between'>
+          <div className='space-y-8'>
+            <p className='text-[16px]'>Get in touch to collaborate. Whether you have a question, a project proposal or just want to say hello, feel free to reach out. I'd love to hear from you!</p>
             <div className='flex gap-5 items-center'>
               <img src={phoneIcon} alt="phone" className='w-8' />03087165428
             </div>
@@ -64,10 +65,10 @@ const Contact = () => {
             </div>
           </div>
           <div className='flex gap-5'>
-            <img src={githubLogo} alt="github" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' />
-            <img src={linkedinLogo} alt="linkedin" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' />
-            <img src={facebookLogo} alt="facebook" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' />
-            <img src={instaLogo} alt="instagram" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' />
+            <a href="https://github.com/umscripts" target='_blank'><img src={githubLogo} alt="github" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
+            <a href="https://www.linkedin.com/in/usmanmustafa181" target='_blank'><img src={linkedinLogo} alt="linkedin" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
+            <a href="https://www.facebook.com/usman.mustafa.90813236" target='_blank'><img src={facebookLogo} alt="facebook" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
+            <a href="https://www.instagram.com/heyy_usmaan" target='_blank'><img src={instaLogo} alt="instagram" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
           </div>
         </div>
         <div className='w-4/6'>

@@ -30,6 +30,9 @@ export default {
         'fill-80': 'fill-80 1.5s ease-out forwards',
         'fill-70': 'fill-70 1.5s ease-out forwards',
       },
+      screens: {
+        'xsm': '600px',
+      },
     },
   },
   plugins: [],

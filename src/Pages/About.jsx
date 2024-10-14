@@ -6,51 +6,66 @@ import expressLogo from '../assets/logos/express-logo.svg';
 
 const About = () => {
   return (
-    <div className='px-20'>
+    <div className='px-10 lg:px-20 my-32' id='about'>
       <p className='text-2xl my-10 border-l-4 pl-5 border-Primary'>About Me</p>
-      <div className='flex w-full'>
-        <div className='w-1/2'>
-          <p className='text-35'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ad provident officiis numquam optio! Aspernatur possimus voluptatem ducimus dolorum natus assumenda omnis hic, nemo, aperiam et vel vero odit magni explicabo nulla quidem minima soluta ex rerum sapiente doloribus alias dolore fuga ullam. Assumenda deserunt fugit eos, magni laborum totam!</p>
+      <div className='flex flex-col md:flex-row w-full items-center justify-between gap-16'>
+        <div className='md:w-1/2'>
+          <p className='text-xs lg:text-sm xl:text-lg'>Proficient in website development, specializing in React.js. Strong background in HTML, CSS
+            and JavaScript. Adept with version control using GitHub. Experienced in building a variety of
+            front-end projects using React.js. Eager to leverage my skills in a new role.
+          </p>
           <p className='text-xl text-Primary font-semibold my-5'>My Skills</p>
-          <div class="flex flex-col gap-1 w-4/6">
-            HTML
-            <div class="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
-              <div class="bg-Primary h-2 rounded-full animate-fill-80"></div>
+          <div className="grid gap-2 lg:gap-3 gap-x-10 lg:w-3/6 xl:grid-cols-1 grid-cols-2">
+            <div>
+              HTML
+              <div className="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
+                <div className="bg-Primary h-2 rounded-full animate-fill-80"></div>
+              </div>
             </div>
-            CSS
-            <div class="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
-              <div class="bg-Primary h-2 rounded-full animate-fill-70"></div>
+            <div>
+              CSS
+              <div className="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
+                <div className="bg-Primary h-2 rounded-full animate-fill-70"></div>
+              </div>
             </div>
-            JavsScript
-            <div class="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
-              <div class="bg-Primary h-2 rounded-full animate-fill-80"></div>
+            <div>
+              JavsScript
+              <div className="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
+                <div className="bg-Primary h-2 rounded-full animate-fill-80"></div>
+              </div>
             </div>
-            React
-            <div class="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
-              <div class="bg-Primary h-2 rounded-full animate-fill-80"></div>
+            <div>
+              React
+              <div className="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
+                <div className="bg-Primary h-2 rounded-full animate-fill-80"></div>
+              </div>
             </div>
-            Node
-            <div class="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
-              <div class="bg-Primary h-2 rounded-full animate-fill-70"></div>
+            <div>
+              Node
+              <div className="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
+                <div className="bg-Primary h-2 rounded-full animate-fill-70"></div>
+              </div>
             </div>
-            MongoDB
-            <div class="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
-              <div class="bg-Primary h-2 rounded-full animate-fill-70"></div>
+            <div>
+              MongoDB
+              <div className="relative w-full bg-gray-300 rounded-full h-2 overflow-hidden">
+                <div className="bg-Primary h-2 rounded-full animate-fill-70"></div>
+              </div>
             </div>
           </div>
         </div>
-        <div className='w-1/2 flex flex-wrap justify-center items-center'>
-          <div className='w-[30%] shadow-custom-shadow h-[35%] m-3 -mt-25 rounded-tl-[40px] flex justify-center items-center flex-col text-gray-300 text-2xl'>
+        <div className='w-3/6 my-10 md:my-0 md:w-5/12 lg:w-2/5 xl:w-2/6 h-full grid grid-cols-2 justify-center items-center'>
+          <div className='w-full shadow-custom-shadow flex justify-center items-center rounded-tl-3xl -mt-10 -ml-5 xl:-mt-20 xl:-ml-10'>
             <img src={reactLogo} alt="" />
           </div>
-          <div className='w-[30%] shadow-custom-shadow h-[35%] m-3 mt-12 rounded-tr-[40px] flex justify-center items-center'>
+          <div className='w-full shadow-custom-shadow flex justify-center items-center rounded-tr-3xl'>
             <img src={nodeLogo} alt="" />
           </div>
-          <div className='w-[30%] shadow-custom-shadow h-[35%] m-3 -mt-20 rounded-bl-[40px] flex justify-center items-center'>
+          <div className='w-full shadow-custom-shadow flex justify-center items-center rounded-bl-3xl -ml-5 xl:-ml-10'>
             <img src={mongoLogo} alt="" />
           </div>
-          <div className='w-[30%] shadow-custom-shadow h-[35%] m-3 -mt-10 rounded-br-[40px] flex justify-center items-center'>
-            <img src={expressLogo} alt="" className='w-40' />
+          <div className='w-full shadow-custom-shadow flex justify-center items-center rounded-br-3xl mt-10 h-full xl:mt-20'>
+            <img src={expressLogo} alt="" />
           </div>
         </div>
       </div>
