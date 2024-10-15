@@ -48,35 +48,38 @@ const Contact = () => {
   };
 
   return (
-    <div className='px-10 lg:px-20 my-32' id='contact'>
-      <p className='text-2xl border-l-4 pl-5 border-Primary my-10'>Let's Connect</p>
-      <div className='flex'>
-        <div className='w-2/6 py-2 text-[16px] flex flex-col justify-between'>
-          <div className='space-y-8'>
-            <p className='text-[16px]'>Get in touch to collaborate. Whether you have a question, a project proposal or just want to say hello, feel free to reach out. I'd love to hear from you!</p>
-            <div className='flex gap-5 items-center'>
-              <img src={phoneIcon} alt="phone" className='w-8' />03087165428
-            </div>
-            <div className='flex gap-5 items-center'>
-              <img src={mailIcon} alt="mail" className='w-8' />musmanmustafa181@gmail.com
-            </div>
-            <div className='flex gap-5 items-center'>
-              <img src={locationIcon} alt="location" className='w-8' />Lahore, Pakistan
+    <div className='px-5 sm:px-10 lg:px-20 mt-20 md:mt-32' id='contact'>
+      <p className='text-2xl border-l-4 pl-5 border-Primary my-5 md:my-10'>Let's Connect</p>
+      <div className='flex flex-col sm:flex-row'>
+        <div className='sm:w-3/6 xl:w-2/6 py-2 pr-2 text-sm lg:text-[16px] flex flex-col justify-between'>
+          <div className='space-y-3 sm:space-y-5 xl:space-y-8 sm:text-xs md:text-sm'>
+            <p className=' w-11/12 lg:w-5/6 sm:text-sm'>Get in touch to collaborate. Whether you have a question, a project proposal or just want to say hello, feel free to reach out. I'd love to hear from you!</p>
+            <div className='space-y-3 sm:space-y-5'>
+              <div className='flex gap-2 md:gap-5 items-center'>
+                <img src={phoneIcon} alt="phone" className='w-6 sm:w-5 md:w-8' />03087165428
+              </div>
+              <div className='flex gap-2 md:gap-5 items-center'>
+                <img src={mailIcon} alt="mail" className='w-6 sm:w-5 md:w-8' />musmanmustafa181@gmail.com
+              </div>
+              <div className='flex gap-2 md:gap-5 items-center'>
+                <img src={locationIcon} alt="location" className='w-6 sm:w-5 md:w-8' />Lahore, Pakistan
+              </div>
             </div>
           </div>
-          <div className='flex gap-5'>
-            <a href="https://github.com/umscripts" target='_blank'><img src={githubLogo} alt="github" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
-            <a href="https://www.linkedin.com/in/usmanmustafa181" target='_blank'><img src={linkedinLogo} alt="linkedin" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
-            <a href="https://www.facebook.com/usman.mustafa.90813236" target='_blank'><img src={facebookLogo} alt="facebook" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
-            <a href="https://www.instagram.com/heyy_usmaan" target='_blank'><img src={instaLogo} alt="instagram" className='w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
+          <div className='flex gap-3 md:gap-5 my-5'>
+            <a href="https://github.com/umscripts" target='_blank'><img src={githubLogo} alt="github" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
+            <a href="https://www.linkedin.com/in/usmanmustafa181" target='_blank'><img src={linkedinLogo} alt="linkedin" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
+            <a href="https://www.facebook.com/usman.mustafa.90813236" target='_blank'><img src={facebookLogo} alt="facebook" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
+            <a href="https://www.instagram.com/heyy_usmaan" target='_blank'><img src={instaLogo} alt="instagram" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
           </div>
         </div>
-        <div className='w-4/6'>
-          <form onSubmit={handleSubmit} className=' flex flex-col'>
-            <div className='relative m-2'>
-              <label class={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.name && '-translate-y-1/2 scale-90 -top-0 left-2 bg-white'} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Full Name
-              </label>
+        <div className='sm:w-3/6 xl:w-4/6'>
+          <form onSubmit={handleSubmit} className='flex flex-col text-xs md:text-sm gap-2'>
+            <div className='relative'>
+              {/* <label class={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.name && '-translate-y-1/2 scale-90 -top-0 left-2 bg-white'} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Full Name
+              </label> */}
               <input
+                placeholder='Full Name'
                 type="text"
                 name="name"
                 value={formData.name}
@@ -85,9 +88,10 @@ const Contact = () => {
                 required
               />
             </div>
-            <div className='relative m-2'>
-              <label htmlFor="phone" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.phone ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Phone Number</label>
+            <div className='relative'>
+              {/* <label htmlFor="phone" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.phone ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Phone Number</label> */}
               <input
+                placeholder='Phone Number (Optional)'
                 type="text"
                 name="phone"
                 value={formData.phone}
@@ -95,9 +99,10 @@ const Contact = () => {
                 className='rounded-lg p-2 w-full border focus:outline-none'
               />
             </div>
-            <div className='relative m-2'>
-              <label htmlFor="email" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.email ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Email Address</label>
+            <div className='relative'>
+              {/* <label htmlFor="email" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.email ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Email Address</label> */}
               <input
+                placeholder='Email Address'
                 type="email"
                 name="email"
                 value={formData.email}
@@ -106,9 +111,10 @@ const Contact = () => {
                 required
               />
             </div>
-            <div className='relative m-2 mb-0'>
-              <label htmlFor="message" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.message ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Message</label>
+            <div className='relative'>
+              {/* <label htmlFor="message" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.message ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Message</label> */}
               <textarea
+                placeholder='Message'
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
@@ -116,7 +122,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <button type="submit" className='w-40 border p-2 rounded-lg mx-2 bg-Primary text-white hover:shadow-custom-shadow'>
+            <button type="submit" className='w-40 border p-2 rounded-lg bg-Primary text-white hover:shadow-custom-shadow text-sm'>
               Send Message
             </button>
           </form>

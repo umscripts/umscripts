@@ -16,3 +16,8 @@
     background: #287BB7;
     border-radius: 10px;
 }
+
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+}

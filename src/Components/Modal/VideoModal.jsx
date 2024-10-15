@@ -5,7 +5,7 @@ const VideoModal = ({ videoUrl, isOpen, onClose }) => {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className="bg-white p-1 pt-10 rounded-lg relative w-7/12">
+            <div className="bg-white p-1 pt-10 rounded-lg relative w-10/12 sm:w-9/12 lg:w-7/12">
                 <button className="absolute top-1 right-3 text-3xl" onClick={onClose}>
                     &times;
                 </button>

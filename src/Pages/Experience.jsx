@@ -11,7 +11,7 @@ const Experience = () => {
         <div className="absolute h-full w-1 xsm:left-0 sm:left-auto border-l-4 border-Primary"></div>
         <div className="relative lg:w-1/2 pr-10 ">
 
-          <div className="hidden sm:block mr-12 xsm:bg-purple-500 sm:bg-red-500 md:mr-20 lg:mr-0 relative p-3 border shadow-custom-shadow rounded-lg space-y-1 hover:bg-Primary hover:text-white">
+          <div className="hidden sm:block mr-12 md:mr-20 lg:mr-0 relative p-3 border shadow-custom-shadow rounded-lg space-y-1 hover:bg-Primary hover:text-white">
             <div className="flex gap-2">
               <a href="https://www.linkedin.com/company/agen-tech/posts/?feedView=all" target='_blank'><img src={agentechLogo} alt="Agentech" className="w-10 md:w-12 h-10 md:h-12" /></a>
               <div>
@@ -44,7 +44,7 @@ const Experience = () => {
             <p className="text-xs lg:text-sm">At <b>Highbit Technologies</b> as a React Developer, I had the opportunity to work on diverse projects that sharpened my skills in building dynamic and responsive web applications. I developed user-centric interfaces, implement scalable solutions and optimize performance.</p>
           </div>
 
-          <div className="sm:hidden mr-12 xsm:w-full sm:w-auto xsm:bg-purple-500 sm:bg-red-500 md:mr-20 lg:mr-0 relative p-3 border shadow-custom-shadow rounded-lg space-y-1 hover:bg-Primary hover:text-white">
+          <div className="sm:hidden mr-12 xsm:w-full sm:w-auto md:mr-20 lg:mr-0 relative p-3 border shadow-custom-shadow rounded-lg space-y-1 hover:bg-Primary hover:text-white">
             <div className="flex gap-2">
               <a href="https://www.linkedin.com/company/agen-tech/posts/?feedView=all" target='_blank'><img src={agentechLogo} alt="Agentech" className="w-10 md:w-12 h-10 md:h-12" /></a>
               <div>
@@ -62,9 +62,9 @@ const Experience = () => {
           <div className="lg:ml-10 relative p-3 border shadow-custom-shadow rounded-lg space-y-1 hover:bg-Primary hover:text-white">
             <div className="flex gap-2">
 
-              <a href="https://kfueit.edu.pk/" target='_blank'><img src={kfueitLogo} alt="KFUEIT" className="w-24 md:w-12 h-10 md:h-12" /></a>
+              <a href="https://kfueit.edu.pk/" target='_blank'><img src={kfueitLogo} alt="KFUEIT" className="min-w-10 md:w-12 h-10 md:h-12" /></a>
               <div>
-                <a href="https://kfueit.edu.pk/" target='_blank'><h3 className="font-bold xsm:text-xs md:text-sm lg:text-[16px]">Khwaja Fareed University of Engineering and Information Technology</h3></a>
+                <a href="https://kfueit.edu.pk/" target='_blank'><h3 className="font-bold text-xs md:text-sm lg:text-[16px]">Khwaja Fareed University of Engineering and Information Technology</h3></a>
                 <h3 className="xsm:text-xs md:text-sm lg:text-[16px]">BS Computer Science</h3>
               </div>
             </div>
