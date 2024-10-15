@@ -31,7 +31,7 @@ const Contact = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        access_key: "37c35959-5672-4c89-95bd-3afc05e99e62",
+        access_key: REACT_APP_EMAIL_ACCESS_KEY,
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
@@ -51,7 +51,7 @@ const Contact = () => {
     <div className='px-10 lg:px-20 my-32' id='contact'>
       <p className='text-2xl border-l-4 pl-5 border-Primary my-10'>Let's Connect</p>
       <div className='flex'>
-        <div className='w-2/6 p-5 text-[16px] flex flex-col justify-between'>
+        <div className='w-2/6 py-2 text-[16px] flex flex-col justify-between'>
           <div className='space-y-8'>
             <p className='text-[16px]'>Get in touch to collaborate. Whether you have a question, a project proposal or just want to say hello, feel free to reach out. I'd love to hear from you!</p>
             <div className='flex gap-5 items-center'>
@@ -74,7 +74,7 @@ const Contact = () => {
         <div className='w-4/6'>
           <form onSubmit={handleSubmit} className=' flex flex-col'>
             <div className='relative m-2'>
-              <label class={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.name ? '-translate-y-1/2 scale-90 top-0 left-1 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Full Name
+              <label class={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.name && '-translate-y-1/2 scale-90 -top-0 left-2 bg-white'} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Full Name
               </label>
               <input
                 type="text"
@@ -86,18 +86,17 @@ const Contact = () => {
               />
             </div>
             <div className='relative m-2'>
-              <label htmlFor="phone" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.phone ? '-translate-y-1/2 scale-90 top-0 left-1 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Phone Number</label>
+              <label htmlFor="phone" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.phone ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Phone Number</label>
               <input
                 type="text"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
                 className='rounded-lg p-2 w-full border focus:outline-none'
-                required
               />
             </div>
             <div className='relative m-2'>
-              <label htmlFor="email" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.email ? '-translate-y-1/2 scale-90 top-0 left-1 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Email Address</label>
+              <label htmlFor="email" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.email ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Email Address</label>
               <input
                 type="email"
                 name="email"
@@ -108,7 +107,7 @@ const Contact = () => {
               />
             </div>
             <div className='relative m-2 mb-0'>
-              <label htmlFor="message" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.message ? '-translate-y-1/2 scale-90 top-0 left-1 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Message</label>
+              <label htmlFor="message" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.message ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Message</label>
               <textarea
                 name="message"
                 value={formData.message}

@@ -31,7 +31,8 @@ export default {
         'fill-70': 'fill-70 1.5s ease-out forwards',
       },
       screens: {
-        'xsm': '600px',
+        'xsm': '300px',
+        'sm': '580px'
       },
     },
   },

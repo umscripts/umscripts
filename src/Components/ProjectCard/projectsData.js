@@ -1,8 +1,13 @@
 import umscriptsImg from '../../assets/projects/umscripts/thumbnail.png';
+import FaceGripsImg from '../../assets/projects/facegrips/thumbnail.png';
+import AiBrainBoxImg from '../../assets/projects/ai-brain-box/thumbnail.jpg';
+import BrandEngineImg from '../../assets/projects/brandengine/thumbnail.png';
+import CodeSheetImg from '../../assets/projects/codesheet/thumbnail.png';
+import umscriptsVid from '../../assets/projects/facegrips/facegrips-video.mp4';
 import FaceGripsVid from '../../assets/projects/facegrips/facegrips-video.mp4';
 import CodeSheetVid from '../../assets/projects/codesheet/codesheet-video.mp4';
 import AiBrainBoxVid from '../../assets/projects/ai-brain-box/ai_brainbox-video.mp4';
-import BrandEngine from '../../assets/projects/ai-brain-box/ai_brainbox-video.mp4';
+import BrandEngineVid from '../../assets/projects/ai-brain-box/ai_brainbox-video.mp4';
 
 const projectsData = [
     {
@@ -11,22 +16,22 @@ const projectsData = [
         image: umscriptsImg,
         name: 'umscripts',
         link: 'umscripts.netlify.app',
-        video: '/path/to/video',
+        video: umscriptsVid,
         description: 'My portfolio website showcases and highlights my skills, projects and experiences. It includes sections for my personal introduction, a downloadable CV, a projects showcase and a timeline of my professional experiences. The site utilizes Tailwind CSS for responsive design and enhanced user experience.',
     },
     {
         id: 2,
         category: 'frontend',
-        image: FaceGripsVid,
+        image: FaceGripsImg,
         name: 'FaceGrips',
-        link: 'https://example.com',
+        link: 'facegrips.netlify.app',
         video: FaceGripsVid,
         description: 'FaceGrips demonstrates my skills in React, integrating third-party APIs and creating interactive user-friendly applications with real-time image processing features. The app allows users to upload an image and automatically detects the number of human faces present. Each face is marked along with its detected facial expressions, such as happiness, sadness or surprise. Users can then download the labeled image for future reference or analysis.',
     },
     {
         id: 3,
         category: 'fullstack',
-        image: 'https://example.com',
+        image: CodeSheetImg,
         name: 'CodeSheet',
         link: 'https://example.com',
         video: CodeSheetVid,
@@ -35,7 +40,7 @@ const projectsData = [
     {
         id: 4,
         category: 'fullstack',
-        image: 'https://example.com',
+        image: AiBrainBoxImg,
         name: 'AI BrainBox',
         link: 'https://example.com',
         video: AiBrainBoxVid,
@@ -44,12 +49,12 @@ const projectsData = [
     {
         id: 5,
         category: 'frontend',
-        image: 'https://example.com',
-        name: 'Brand - SearchEngine',
-        link: 'https://example.com',
-        video: BrandEngine,
-        description: 'An AI web app, built with MERN stack and python libraries, is designed to streamline various tasks like text text summarizing, grammar correction, audio file transcription and code generation. The application leverages powerful libraries such as Streamlit, Pytube, Voice Recognition, Gramformer and Code-Llama.',
+        image: BrandEngineImg,
+        name: 'BrandEngine',
+        link: 'brandengine.netlify.app',
+        video: BrandEngineVid,
+        description: 'BrandEngine is a dynamic web application featuring user authentication and a comprehensive brand catalog organized by categories. Users can explore various brands, view detailed information including social media followers, ratings and reviews. Users cab manage their reviews through viewing, editing, updating or deleting entries. Additionally, it includes a robust email subscription system and a functional contact form.',
     },
 ];
 
-export default projectsData
+export default projectsData;
