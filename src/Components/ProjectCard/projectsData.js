@@ -23,6 +23,16 @@ const projectsData = [
     {
         id: 2,
         category: 'frontend',
+        image: BrandEngineImg,
+        name: 'BrandEngine',
+        link: 'brandengine.netlify.app',
+        video: BrandEngineVid,
+        description: 'BrandEngine is a dynamic web application featuring user authentication and a comprehensive brand catalog organized by categories. Users can explore various brands, view detailed information including social media followers, ratings and reviews. Users cab manage their reviews through viewing, editing, updating or deleting entries. Additionally, it includes a robust email subscription system and a functional contact form.',
+        isLive: false,
+    },
+    {
+        id: 3,
+        category: 'frontend',
         image: FaceGripsImg,
         name: 'FaceGrips',
         link: 'facegrips.netlify.app',
@@ -31,7 +41,7 @@ const projectsData = [
         isLive: true,
     },
     {
-        id: 3,
+        id: 4,
         category: 'fullstack',
         image: CodeSheetImg,
         name: 'CodeSheet',
@@ -41,7 +51,7 @@ const projectsData = [
         isLive: false,
     },
     {
-        id: 4,
+        id: 5,
         category: 'fullstack',
         image: AiBrainBoxImg,
         name: 'AI BrainBox',
@@ -50,16 +60,7 @@ const projectsData = [
         description: 'An AI web app, built with MERN stack and python libraries, is designed to streamline various tasks like text text summarizing, grammar correction, audio file transcription and code generation. The application leverages powerful libraries such as Streamlit, Pytube, Voice Recognition, Gramformer and Code-Llama.',
         isLive: false,
     },
-    {
-        id: 5,
-        category: 'frontend',
-        image: BrandEngineImg,
-        name: 'BrandEngine',
-        link: 'brandengine.netlify.app',
-        video: BrandEngineVid,
-        description: 'BrandEngine is a dynamic web application featuring user authentication and a comprehensive brand catalog organized by categories. Users can explore various brands, view detailed information including social media followers, ratings and reviews. Users cab manage their reviews through viewing, editing, updating or deleting entries. Additionally, it includes a robust email subscription system and a functional contact form.',
-        isLive: true,
-    },
+
 ];
 
 export default projectsData;

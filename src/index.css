@@ -13,11 +13,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #287BB7;
+    background: #0CB7C6;
     border-radius: 10px;
 }
 
 body {
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: 0 auto;
 }

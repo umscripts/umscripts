@@ -48,7 +48,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='px-5 sm:px-10 lg:px-20 mt-20 md:mt-32' id='contact'>
+    <div className='px-5 sm:px-10 lg:px-20 my-20 md:my-32' id='contact'>
       <p className='text-2xl border-l-4 pl-5 border-Primary my-5 md:my-10'>Let's Connect</p>
       <div className='flex flex-col sm:flex-row'>
         <div className='sm:w-3/6 xl:w-2/6 py-2 pr-2 text-sm lg:text-[16px] flex flex-col justify-between'>
