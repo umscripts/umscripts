@@ -6,7 +6,7 @@ import expressLogo from '../assets/logos/express-logo.svg';
 
 const About = () => {
   return (
-    <div className='px-5 sm:px-10 lg:px-20 my-20 md:my-32' id='about'>
+    <div className='px-5 sm:px-10 lg:px-20 my-20 md:my-32 overflow-hidden' id='about'>
       <p className='text-2xl my-5 md:my-10 border-l-4 pl-5 border-Primary'>About Me</p>
       <div className='flex flex-col md:flex-row w-full items-center justify-between gap-16'>
         <div className='md:w-1/2'>

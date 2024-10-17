@@ -5,7 +5,7 @@ const Home = () => {
     const resumeUrl = '/Resume.pdf';
 
     return (
-        <div className="sm:flex justify-between items-center h-full px-5 sm:px-10 lg:px-20 mt-5 sm:mt-10 xl:mt-5 my-20 md:my-32" data-aos="zoom-in">
+        <div className="sm:flex justify-between items-center h-full px-5 sm:px-10 lg:px-20 mt-5 sm:mt-10 xl:mt-5 my-20 md:my-32" data-aos="zoom-out">
             <div className='text-lg lg:text-2xl flex flex-col gap-2 lg:gap-4'>
                 <div>
                     Hi I'm<span className='block text-xl md:text-2xl lg:text-4xl text-Primary font-semibold'> Usman Mustafa</span>

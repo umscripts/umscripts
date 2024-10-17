@@ -5,7 +5,7 @@ import kfueitLogo from '../assets/logos/kfueit-logo.png';
 
 const Experience = () => {
   return (
-    <div className='px-5 sm:px-10 lg:px-20 my-20 md:my-32' id='experience'>
+    <div className='px-5 sm:px-10 lg:px-20 my-20 md:my-32 overflow-hidden' id='experience'>
       <p className='text-2xl my-10 border-l-4 left-0 pl-5 border-Primary'>My Journey</p>
       <div className="relative flex justify-center items-center">
         <div className="absolute h-full w-1 xsm:left-0 sm:left-auto border-l-4 border-Primary"></div>
