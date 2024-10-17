@@ -25,10 +25,10 @@ const projectsData = [
         category: 'frontend',
         image: BrandEngineImg,
         name: 'BrandEngine',
-        link: 'brandengine.netlify.app',
+        link: 'testing-deployment-frontend-2-jov1.vercel.app/',
         video: BrandEngineVid,
         description: 'BrandEngine is a dynamic web application featuring user authentication and a comprehensive brand catalog organized by categories. Users can explore various brands, view detailed information including social media followers, ratings and reviews. Users cab manage their reviews through viewing, editing, updating or deleting entries. Additionally, it includes a robust email subscription system and a functional contact form.',
-        isLive: false,
+        isLive: true,
     },
     {
         id: 3,
