@@ -19,7 +19,7 @@ const ProjectCard = ({ id, category, image, link, video, name, description, isLi
 
     return (
         <div key={id} className='text-sm p-2 md:p-5 border border-gray-300 rounded-lg space-y-2 lg:space-y-3 hover:shadow-custom-shadow bg-PrimaryBG my-2 sm:my-0'>
-            <img src={image} alt={name} className="w-full h-auto max-h-40 2xl:max-h-64 object-cover border border-gray-300 rounded-lg overflow-hidden" />
+            <img src={image} alt={name} className="w-11/12 mx-auto transition-transform duration-700 ease-in-out hover:scale-110 h-auto max-h-40 2xl:max-h-64 object-cover" />
             <div className='flex gap-1'>
                 <button className={isLive ? 'border hover:border-Primary py-1 px-2 lg:p-2 text-Primary rounded-md lg:rounded-lg items-center justify-center' : 'hidden'}><a href={`https://${link}`} target='_blank' className='inline-flex gap-1'>Visti<img src={linkIcon} alt="link" className='w-4' /></a></button>
                 <button className='border hover:border-Primary py-1 px-2 lg:p-2 text-Primary rounded-md lg:rounded-lg flex items-center justify-center gap-1' onClick={() => setIsModalOpen(true)}>Demo <img src={videoIcon} alt="video" className='w-5' /></button>

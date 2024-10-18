@@ -3,7 +3,7 @@ import FaceGripsImg from '../../assets/projects/facegrips/thumbnail.png';
 import AiBrainBoxImg from '../../assets/projects/ai-brain-box/thumbnail.jpg';
 import BrandEngineImg from '../../assets/projects/brandengine/thumbnail.png';
 import CodeSheetImg from '../../assets/projects/codesheet/thumbnail.png';
-import umscriptsVid from '../../assets/projects/facegrips/facegrips-video.mp4';
+// import umscriptsVid from '../../assets/projects/facegrips/facegrips-video.mp4';
 import FaceGripsVid from '../../assets/projects/facegrips/facegrips-video.mp4';
 import CodeSheetVid from '../../assets/projects/codesheet/codesheet-video.mp4';
 import AiBrainBoxVid from '../../assets/projects/ai-brain-box/ai_brainbox-video.mp4';
@@ -16,7 +16,7 @@ const projectsData = [
         image: umscriptsImg,
         name: 'umscripts',
         link: 'umscripts.netlify.app',
-        video: umscriptsVid,
+        // video: umscriptsVid,
         description: 'My portfolio website showcases and highlights my skills, projects and experiences. It includes sections for my personal introduction, a downloadable CV, a projects showcase and a timeline of my professional experiences. The site utilizes Tailwind CSS for responsive design and enhanced user experience.',
         isLive: true,
     },
