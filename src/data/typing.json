@@ -1,0 +1,17 @@
+{
+  "titles": [
+    "Software Developer",
+    "Full Stack Developer",
+    "React.JS Developer",
+    "Frontend Developer",
+    "Next.js Developer",
+    "Bubble.io Developer"
+  ],
+  "typingSpeed": 50,
+  "pauseAfterComplete": 1000,
+  "pauseAfterDelete": 100,
+  "settings": {
+    "infiniteLoop": true,
+    "startDelay": 250
+  }
+}

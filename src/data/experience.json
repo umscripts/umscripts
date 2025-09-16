@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "company": "Hashlogics",
+    "position": "Website Developer",
+    "duration": "Dec 2024 - Present",
+    "location": "Lahore",
+    "description": "As a <b>Website Developer</b> at Hashlogics, I contribute to end-to-end development of scalable web applications. My role involves designing responsive user interfaces, implementing secure workflows, and integrating APIs to deliver high-performing solutions. I collaborate closely with cross-functional teams to ensure client requirements are met with efficiency and innovation.",
+    "logoKey": "hashlogics",
+    "link": "https://www.linkedin.com/company/hashlogics/posts/?feedView=all",
+    "type": "job"
+  },
+  {
+    "id": 3,
+    "company": "Highbit Technologies",
+    "position": "Frontend Developer",
+    "duration": "Feb 2024 - Nov 2024",
+    "location": "Lahore",
+    "description": "At <b>Highbit Technologies</b>, I worked as a React.js Developer on diverse client projects, focusing on building dynamic, user-centric web applications. My responsibilities included developing reusable components, integrating APIs, and ensuring responsive and scalable front-end solutions. I also optimized applications for performance and collaborated with design teams to deliver seamless user experiences.",
+    "logoKey": "highbit",
+    "link": "https://www.linkedin.com/company/highbitsolutions/mycompany/",
+    "type": "job"
+  },
+  {
+    "id": 2,
+    "company": "Agentech",
+    "position": "Frontend Developer Intern",
+    "duration": "Nov 2023 - Jan 2024",
+    "location": "Rahim Yar Khan",
+    "description": "During my internship at <b>Agentech</b>, I gained practical experience in front-end development using React.js. I contributed to building interactive user interfaces, optimized components for performance, and assisted senior developers in delivering client-focused web solutions. This role strengthened my fundamentals in modern JavaScript frameworks and agile collaboration.",
+    "logoKey": "agentech",
+    "link": "https://www.linkedin.com/company/agen-tech/posts/?feedView=all",
+    "type": "internship"
+  },
+  {
+    "id": 4,
+    "company": "Khwaja Fareed University of Engineering and Information Technology",
+    "position": "BS Computer Science",
+    "duration": "June 2020 - June 2024",
+    "location": "Rahim Yar Khan",
+    "description": "I earned my Bachelor's degree in <b>Computer Science</b> from KFUEIT, where I built a solid foundation in core computer science principles, including algorithms, databases, and software engineering. My academic journey sparked a strong interest in web development and inspired me to pursue a career in modern web technologies.",
+    "logoKey": "kfueit",
+    "logoStyle": { "minWidth": "3rem", "backgroundColor": "white" },
+    "link": "https://kfueit.edu.pk/",
+    "type": "education"
+  }
+]

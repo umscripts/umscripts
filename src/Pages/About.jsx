@@ -10,7 +10,7 @@ const About = () => {
       <p className='text-2xl my-5 md:my-10 border-l-4 pl-5 border-Primary'>About Me</p>
       <div className='flex flex-col md:flex-row w-full items-center justify-between gap-16'>
         <div className='md:w-1/2'>
-          <p className='text-xs lg:text-sm xl:text-lg'>Proficient in website development, specializing in React.js. Strong background in HTML, CSS and JavaScript. Adept with version control using GitHub. Experienced in building a variety of front-end projects using React.js. Eager to leverage my skills in a new role.
+          <p className='text-xs lg:text-sm xl:text-lg'>Proficient in website development with 1.5+ years of experience in React.js, Next.js and modern JavaScript. Proficient in GitHub and experienced in building responsive, user-friendly applications. Expanding expertise into backend with Node.js, Express and MongoDB to grow as a full stack developer.
           </p>
           <p className='text-xl text-Primary font-semibold my-5'>My Skills</p>
           {/* <div className="grid gap-2 lg:gap-3 gap-x-10 lg:w-4/6 xl:grid-cols-1 grid-cols-2">
@@ -59,16 +59,18 @@ const About = () => {
             <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Axios</button>
             <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Redux Toolkit</button>
             <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>TanStack</button>
-            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>React Router</button>
-            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Tailwind CSS</button>
-            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Bootstrap</button>
-            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Shadcn UI</button>
-            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Material UI</button>
-            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Chakra UI</button>
-            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Figma</button>
-            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>REST API</button>
             <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Next.js</button>
-            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Strong Communication</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Tailwind CSS</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Node.js</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Express.js</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>MongoDB</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>MySQL</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>REST APIs</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>GraphQL APIs</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>LangChain</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>n8n</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Bubble.io</button>
+            <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Fast Learning</button>
             <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Time Management</button>
             <button className='border rounded-lg px-2 py-1 bg-Primary text-white cursor-default'>Problem Solving</button>
           </div>

@@ -16,6 +16,9 @@ const Contact = () => {
   });
 
   const [formStatus, setFormStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const ACCESS_KEY = "37c35959-5672-4c89-95bd-3afc05e99e62";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,26 +27,44 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setFormStatus('');
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        access_key: REACT_APP_EMAIL_ACCESS_KEY,
-        name: formData.name,
-        phone: formData.phone,
-        email: formData.email,
-        message: formData.message,
-      }),
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          name: formData.name,
+          phone: formData.phone || "Not provided",
+          email: formData.email,
+          message: formData.message,
+          subject: `New Contact Form Message from ${formData.name}`,
+          from_name: formData.name,
+          source: "umscripts - Contact Form"
+        }),
+      });
 
-    if (response.ok) {
-      setFormStatus('Message sent successfully!');
-      setFormData({ name: '', phone: '', email: '', message: '' });
-    } else {
-      setFormStatus('Failed to send message. Please try again later.');
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setFormStatus('✅ Message sent successfully! Thank you for reaching out.');
+        setFormData({ name: '', phone: '', email: '', message: '' });
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setFormStatus('❌ Failed to send message. Please try again later or contact me directly.');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => {
+        setFormStatus('')
+      }, 3000);
     }
   };
 
@@ -67,63 +88,88 @@ const Contact = () => {
             </div>
           </div>
           <div className='flex gap-3 md:gap-5 my-5'>
-            <a href="https://github.com/umscripts" target='_blank'><img src={githubLogo} alt="github" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
-            <a href="https://www.linkedin.com/in/usmanmustafa181" target='_blank'><img src={linkedinLogo} alt="linkedin" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
-            <a href="https://www.facebook.com/usman.mustafa.90813236" target='_blank'><img src={facebookLogo} alt="facebook" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
-            <a href="https://www.instagram.com/heyy_usmaan" target='_blank'><img src={instaLogo} alt="instagram" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' /></a>
+            <a href="https://github.com/umscripts" target='_blank' rel="noopener noreferrer">
+              <img src={githubLogo} alt="github" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' />
+            </a>
+            <a href="https://www.linkedin.com/in/usmanmustafa181" target='_blank' rel="noopener noreferrer">
+              <img src={linkedinLogo} alt="linkedin" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' />
+            </a>
+            <a href="https://www.facebook.com/usman.mustafa.90813236" target='_blank' rel="noopener noreferrer">
+              <img src={facebookLogo} alt="facebook" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' />
+            </a>
+            <a href="https://www.instagram.com/heyy_usmaan" target='_blank' rel="noopener noreferrer">
+              <img src={instaLogo} alt="instagram" className='w-8 md:w-10 hover:shadow-custom-shadow cursor-pointer rounded-lg' />
+            </a>
           </div>
         </div>
         <div className='sm:w-3/6 xl:w-4/6'>
           <form onSubmit={handleSubmit} className='flex flex-col text-xs md:text-sm gap-2'>
             <div className='relative'>
-              {/* <label class={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.name && '-translate-y-1/2 scale-90 -top-0 left-2 bg-white'} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Full Name
-              </label> */}
               <input
                 placeholder='Full Name'
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className='rounded-lg p-2 w-full border focus:outline-none'
+                className='rounded-lg p-2 w-full border focus:outline-none focus:border-Primary transition-colors'
                 required
+                disabled={isSubmitting}
               />
             </div>
             <div className='relative'>
-              {/* <label htmlFor="phone" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.phone ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Phone Number</label> */}
               <input
                 placeholder='Phone Number (Optional)'
-                type="text"
+                type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className='rounded-lg p-2 w-full border focus:outline-none'
+                className='rounded-lg p-2 w-full border focus:outline-none focus:border-Primary transition-colors'
+                disabled={isSubmitting}
               />
             </div>
             <div className='relative'>
-              {/* <label htmlFor="email" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.email ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Email Address</label> */}
               <input
                 placeholder='Email Address'
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className='rounded-lg p-2 w-full border focus:outline-none'
+                className='rounded-lg p-2 w-full border focus:outline-none focus:border-Primary transition-colors'
                 required
+                disabled={isSubmitting}
               />
             </div>
             <div className='relative'>
-              {/* <label htmlFor="message" className={`text-sm absolute left-4 top-[10px] pointer-events-none transition-all duration-700 transform ${formData.message ? '-translate-y-1/2 scale-90 -top-0 left-2 bg-white' : ''} peer-focus:-translate-y-1/2 peer-focus:scale-90 peer-focus:py-0 peer-focus:mt-0 peer-focus:bg-white peer-focus:px-1`}>Message</label> */}
               <textarea
                 placeholder='Message'
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className='rounded-lg p-2 w-full border focus:outline-none resize-none min-h-40'
+                className='rounded-lg p-2 w-full border focus:outline-none focus:border-Primary transition-colors resize-none min-h-40'
                 required
+                disabled={isSubmitting}
               />
             </div>
-            <button type="submit" className='w-40 border p-2 rounded-lg bg-Primary text-white hover:shadow-custom-shadow text-sm'>
-              Send Message
+            
+            {/* Status Message */}
+            {formStatus && (
+              <div className={`p-3 rounded-lg text-sm ${
+                formStatus.includes('✅') 
+                  ? 'bg-green-100 text-green-700 border border-green-300' 
+                  : 'bg-red-100 text-red-700 border border-red-300'
+              }`}>
+                {formStatus}
+              </div>
+            )}
+            
+            <button 
+              type="submit" 
+              className={`w-40 border p-2 rounded-lg bg-Primary text-white hover:shadow-custom-shadow text-sm transition-all ${
+                isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-opacity-90'
+              }`}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
